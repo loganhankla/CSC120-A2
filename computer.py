@@ -33,3 +33,10 @@ class Computer:
         print(self.description, ", ", self.processor_type, ", ",  
         self.hard_drive_capacity, ", ", self.memory, ", ", self.operating_system,
         ", ", self.year_made, ", ", self.price)
+
+def main():
+    c = Computer("Desktop", "M1", 64, 68, "Cool OS", 2018, 2500)
+    c.printDetails()
+
+if __name__ == "__main__":
+    main()

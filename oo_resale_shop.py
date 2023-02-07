@@ -21,10 +21,24 @@ class ResaleShop:
         self.inventory.append(c)
         ## sell
    # def sell(self, c:Computer):
-   #     self.inventory.remove(c)
+   # check in inventory,
+        if c in self.inventory:
+            self.inventory.remove(c)
+        else:    
+            print("Sorry, computer not found in store inventory.")
         # update OS
-   # def update_OS(self, c:Computer):
-
+   # def refurbish(self, c:Computer):
+#update OS
         # update price
-        
+# print inventory, loop over all computers for printDetails
         # print errors
+
+def main():
+    c = Computer("Desktop", "M1", 64, 68, "Cool OS", 2018, 2500)
+  #  print(c)
+    store = ResaleShop()
+    store.buy(c)
+    print("Inventory:", store.inventory)
+
+main()
+
