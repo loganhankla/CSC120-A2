@@ -1,3 +1,11 @@
+"""
+   Filename: oo_resale_shop.py
+Description: An OOP approach to creating the Resale Shop class for A2 in CSC 120.
+     Author: Logan Hankla (@loganhankla)
+       Date: 7 February 2023
+"""
+
+
 class ResaleShop:
 
     # What attributes will it need?
