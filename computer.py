@@ -6,7 +6,7 @@ Description: An OOP approach to creating the computer class for A2 in CSC 120.
 """
 
 class Computer:
-
+    """This class represents the type Computer that stores all the information about a given computer."""
     # What attributes will it need?
     description: str
     processor_type: str
@@ -30,9 +30,9 @@ class Computer:
         
     # What methods will you need?
     def printDetails(self):
-        print(self.description, ", ", self.processor_type, ", ",  
-        self.hard_drive_capacity, ", ", self.memory, ", ", self.operating_system,
-        ", ", self.year_made, ", ", self.price)
+        print(self.description + ",", self.processor_type + ",",  
+        self.hard_drive_capacity, ",", self.memory, ",", self.operating_system +
+        ",", self.year_made, ",", self.price)
 
 def main():
     c = Computer("Desktop", "M1", 64, 68, "Cool OS", 2018, 2500)

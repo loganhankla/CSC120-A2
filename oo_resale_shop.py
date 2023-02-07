@@ -7,38 +7,52 @@ Description: An OOP approach to creating the Resale Shop class for A2 in CSC 120
 from computer import *
 
 class ResaleShop:
-
+    """This class represents a given Resale Shop that can buy, sell, and refurbish computers."""
     # What attributes will it need?
     
     # How will you set up your constructor?
     # Remember: in python, all constructors have the same name (__init__)
     def __init__(self):
-        pass # You'll remove this when you fill out your constructor
         self.inventory = []
     # What methods will you need?
-        ## buy
+    
     def buy(self, c:Computer):
         self.inventory.append(c)
-        ## sell
-   # def sell(self, c:Computer):
-   # check in inventory,
+       
+    def sell(self, c:Computer):
+        # check if in inventory
         if c in self.inventory:
             self.inventory.remove(c)
         else:    
             print("Sorry, computer not found in store inventory.")
-        # update OS
-   # def refurbish(self, c:Computer):
-#update OS
+        
+    def refurbish(self, c:Computer):
+        #update OS
+        c.operating_system = "LatestOS" 
         # update price
-# print inventory, loop over all computers for printDetails
-        # print errors
+        c.price = c.price + 300 
+
+    def getInventory(self):
+        print("Inventory with details:")
+        for c in self.inventory:
+            c.printDetails() 
+
 
 def main():
+    # testing methods
     c = Computer("Desktop", "M1", 64, 68, "Cool OS", 2018, 2500)
-  #  print(c)
+    c1 = Computer("My Desktop", "M2", 100, 68, "Older OS", 2010, 2000)
+    print("First bought computer:", c)
     store = ResaleShop()
     store.buy(c)
-    print("Inventory:", store.inventory)
+    store.refurbish(c)
+    store.buy(c1)
+    store.refurbish(c1)
+    c1.printDetails()
+    print("Full Inventory:", store.inventory)
+    store.getInventory()
+    store.sell(c)
+    store.getInventory()
 
 main()
 
